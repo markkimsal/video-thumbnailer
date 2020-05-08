@@ -22,3 +22,11 @@ Example
 ```
  curl  -X GET "http://127.0.0.1:9999/index.php?url=https://github.com/markkimsal/video-thumbnailer/raw/master/fixtures/ISS-live-stream-earth-from-space-2020-05-08.mp4&s=3.8" --output test_iss_earth.jpg
 ```
+
+Security
+===
+This is essentially an open proxy, so secure it with:
+ * firewall rules
+ * reverse proxy
+ * docker swarm networks
+ * k8s
