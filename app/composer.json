@@ -1,0 +1,8 @@
+{
+    "name": "markkimsal/video-thumbnail-php",
+    "type": "project",
+    "require": {
+        "robinvdvleuten/ulid": "^4.0"
+    },
+    "license": "gpl"
+}
