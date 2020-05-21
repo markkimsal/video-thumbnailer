@@ -24,10 +24,13 @@ Run the image
 docker run --rm -d -p 9999:80 markkimsal/video-thumbnailer:1.0.1
 ```
 
-Test the image
+Test the service:
 ```
- curl  -X GET "http://127.0.0.1:9999/index.php?url=https://github.com/markkimsal/video-thumbnailer/raw/master/fixtures/ISS-live-stream-earth-from-space-2020-05-08.mp4&s=3.8" --output test_iss_earth.jpg
+ curl -O -J -X GET "http://127.0.0.1:9999/index.php?url=https://github.com/markkimsal/video-thumbnailer/raw/master/fixtures/ISS-live-stream-earth-from-space-2020-05-08.mp4&s=3.8"
 ```
+This will download the file and use the header from `Content-disposition: attachment;filename=""` to save the file locally.
+
+The filename is a ULID.
 
 Security
 ===
