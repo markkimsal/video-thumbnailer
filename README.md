@@ -8,7 +8,6 @@ URL parameters are:
  * s:  the second into the video that the screenshot should be taken (defaults to 2)
  * fmt:  format of the image, either png, jpg, or jpeg (defaults to jpg)
 
-
 Response
 ===
 The response will be the binary output of the screenshot image.  The image is currently not scaled.
@@ -19,6 +18,13 @@ Headers returned include:
 
 Example
 ===
+
+Run the image
+```
+docker run --rm -d -p 9999:80 markkimsal/video-thumbnailer:1.0.1
+```
+
+Test the image
 ```
  curl  -X GET "http://127.0.0.1:9999/index.php?url=https://github.com/markkimsal/video-thumbnailer/raw/master/fixtures/ISS-live-stream-earth-from-space-2020-05-08.mp4&s=3.8" --output test_iss_earth.jpg
 ```
