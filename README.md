@@ -13,8 +13,9 @@ Response
 The response will be the binary output of the screenshot image.  The image is currently not scaled.
 
 Headers returned include:
- * Content-disposition: attachment; filename="{unique id.png}"
- * Content-type: [ image/png | image/jpeg ]
+ * Content-Disposition: attachment; filename="{unique id.png}"
+ * Content-Type: [ image/png | image/jpeg ]
+ * Content-Length: [ integer num bytes ]
 
 Example
 ===
