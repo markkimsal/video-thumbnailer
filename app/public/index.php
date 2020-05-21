@@ -49,9 +49,11 @@ if (!$f) {
 	header('X-Error: fopen failed');
 	exit(-1);
 }
+['size'=>$size] = fstat($f);
 
 header('Content-Type: image/'.$fmt);
 header('Content-Disposition: attachment; filename="'.$picName.'"');
+header('Content-Length: '.$size);
 fpassthru($f);
 fclose($f);
 unlink($picName);
