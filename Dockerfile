@@ -1,4 +1,4 @@
-FROM markkimsal/php-nginx-phusion:7.3-fpm-db
+FROM markkimsal/php-nginx-phusion:7.3-fpm
 
 RUN set -ex \
     && { \
