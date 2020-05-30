@@ -40,3 +40,15 @@ This is essentially an open proxy, so secure it with:
  * reverse proxy
  * docker swarm networks
  * k8s
+
+You can restrict the video downloading to a list of known hosts via the `DOMAINS` environment variable.
+
+```
+#docker-compose.yml
+
+    environment:
+       - DOMAINS=github.com,igotaprinter.com
+```
+
+If the requested video's host does not match something in the list, it will be rejected with `'422 Unprocesible Entity'`.
+Matching is done with the `host` component of php's `parse_url()` function.
