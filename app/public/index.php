@@ -21,6 +21,16 @@ if (substr($url, 0, 4) !== 'http') {
 	header('HTTP/1.1 422 Unprocesible Entity');
 	exit();
 }
+[
+	'scheme' => $scheme,
+	'host'   => $host,
+] = parse_url($url);
+
+$allowedDomains = getenv('DOMAINS') ? explode(',', getenv('DOMAINS')) : [];
+if (!empty($allowedDomains) && ! in_array($host, $allowedDomains)) {
+	header('HTTP/1.1 422 Unprocesible Entity');
+	exit();
+}
 
 $picName = sprintf('%s.%s', $jobTicket, $fmt);
 $convertFlags = '';

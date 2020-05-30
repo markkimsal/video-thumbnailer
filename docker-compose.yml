@@ -8,3 +8,5 @@ services:
         dockerfile: Dockerfile
     ports:
        - 9999:80
+    environment:
+       - DOMAINS=github.com
