@@ -3,7 +3,7 @@ version: '3.4'
 
 services:
   vthumb:
-    image: markkimsal/video-thumbnailer:1.1.0
+    image: markkimsal/video-thumbnailer:1.2.0
     build:
         context: .
         dockerfile: Dockerfile
