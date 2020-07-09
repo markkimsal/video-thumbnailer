@@ -33,6 +33,10 @@ This will download the file and use the header from `Content-disposition: attach
 
 The filename is a ULID.
 
+Caching
+===
+Public cache-control headers are sent along with an expires for 1 month.  Adjust the nginx-vhost.conf file to suit your needs and rebuild with docker-compose.
+
 Security
 ===
 This is essentially an open proxy, so secure it with:
