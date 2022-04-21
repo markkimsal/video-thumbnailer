@@ -41,7 +41,7 @@ if ($codec == 'jpeg') {
 	$convertFlags = ' -vcodec mjpeg  -q:v 15 ';
 }
 
-$cmd = 'ffmpeg -ss '.escapeshellarg($s).' -i '.escapeshellarg($url).' -vframes 1 '.$convertFlags.' -an '.$picName;
+$cmd = 'ffmpeg -ss '.escapeshellarg($s).' -i '.escapeshellarg($url).' -vframes 1 '.$convertFlags.' -an '.$picName . ' 2>&1';
 
 $output = '';
 $ret = 0;
