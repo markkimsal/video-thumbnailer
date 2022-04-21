@@ -22,7 +22,7 @@ Example
 
 Run the image
 ```
-docker run --rm -d -p 9999:80 markkimsal/video-thumbnailer:1.1.0
+docker run --rm -d -p 9999:8080 markkimsal/video-thumbnailer:2.0.0
 ```
 
 Test the service:
