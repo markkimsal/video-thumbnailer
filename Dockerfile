@@ -1,9 +1,9 @@
-FROM markkimsal/php-nginx-phusion:7.3-fpm
+FROM markkimsal/php-platform:8.0-nginx-fpm
 
 RUN set -ex \
     && { \
             apt-get update ; \
-            apt-get install -y ffmpeg; \
+            apt-get install -y --no-install-recommends ffmpeg; \
             rm -rf /var/lib/apt/lists/*; \
        }
 
